@@ -1,35 +1,49 @@
-import React from 'react'
+import React from "react";
 
-const MapScreen = () => {
-  const zones = [
-    { name: "Hilltop", types: ["Commuter", "Junior", "Senior"] },
-    { name: "CAS", types: ["Sophomore"] },
-    { name: "Hogan", types: ["Senior", "Visitor", "Commuter"] },
-    { name: "North Lot", types: ["Commuter", "Faculty & Staff"] },
-    { name: "Development", types: ["Faculty & Staff", "Vendor"] },
-    { name: "Westwoods", types: ["Everyone"] },
-    { name: "Whitney Village", types: ["Commuter", "Junior", "Senior"] },
-    { name: "Harwood", types: ["Visitor"] },
-  ]
-
+function MapScreen() {
   return (
-    <div className="min-h-screen bg-white p-6">
-      <h2 className="text-2xl font-bold mb-4 text-center text-blue-600">Live Campus Parking Map</h2>
+    <div className="min-h-screen bg-gray-900 text-white p-6">
+      <h1 className="text-3xl font-bold mb-6">Live Campus Parking Map</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {zones.map((zone, index) => (
-          <div
-            key={index}
-            className="rounded-xl border border-gray-200 shadow-md p-4 hover:shadow-lg transition"
-          >
-            <h3 className="text-xl font-semibold text-gray-800">{zone.name}</h3>
-            <p className="mt-2 text-sm text-gray-500">Allowed: {zone.types.join(", ")}</p>
-            <div className="mt-3 text-green-600 text-sm font-semibold">Spots: Checking...</div>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h2 className="text-xl font-semibold">Hilltop</h2>
+          <p>Allowed: Commuter, Junior, Senior</p>
+          <p>Spots: Checking...</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold">CAS</h2>
+          <p>Allowed: Sophomore</p>
+          <p>Spots: Checking...</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold">Hogan</h2>
+          <p>Allowed: Senior, Visitor, Commuter</p>
+          <p>Spots: Checking...</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold">North Lot</h2>
+          <p>Allowed: Commuter, Faculty & Staff</p>
+          <p>Spots: Checking...</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold">Development</h2>
+          <p>Allowed: Faculty & Staff, Vendor</p>
+          <p>Spots: Checking...</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold">Westwoods</h2>
+          <p>Allowed: Everyone</p>
+          <p>Spots: Checking...</p>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default MapScreen
+export default MapScreen;
