@@ -7,4 +7,8 @@ This project is a smart parking solution designed to provide real-time updates o
 - Easily accessible and minimalistic interface.
 - Real-time updates for parking spot status.
 
+## Technologies Used
 
+- React
+- Tailwind CSS
+- Vite
